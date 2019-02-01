@@ -100,6 +100,9 @@ dbplot_bar <- function(data, x,...,y = n()) {
     y = !! y
   )
   
+  df <- df %>% 
+    mutate_all(as.numeric)
+  
   if(ncol(df) == 2){
     if(length(vars)==1){
       y <- vars

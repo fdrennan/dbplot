@@ -81,6 +81,8 @@ db_compute_bins <- function(data, x, bins = 30, binwidth = NULL) {
 #'
 #' @export
 dbplot_histogram <- function(data, x, bins = 30, binwidth = NULL) {
+  
+  
   x <- enexpr(x)
 
   df <- db_compute_bins(
@@ -92,7 +94,11 @@ dbplot_histogram <- function(data, x, bins = 30, binwidth = NULL) {
     mutate(
       x = !! x
     )
-
+  
+  df <- 
+    df %>% 
+    mutate_all(as.numeric)
+  
   ggplot(df) +
     geom_col(aes(x, count)) +
     labs(
