@@ -81,8 +81,6 @@ db_compute_bins <- function(data, x, bins = 30, binwidth = NULL) {
 #'
 #' @export
 dbplot_histogram <- function(data, x, bins = 30, binwidth = NULL) {
-  
-  
   x <- enexpr(x)
 
   df <- db_compute_bins(
