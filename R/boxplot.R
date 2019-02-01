@@ -62,7 +62,7 @@ db_compute_boxplot <- function(data, x, var, coef = 1.5) {
 #' @param coef Length of the whiskers as multiple of IQR. Defaults to 1.5
 #'
 #' @seealso
-#' \code{\link{}}, \code{\link{dbplot_line}} ,
+#' \code{\link{dbplot_bar}}, \code{\link{dbplot_line}}
 #'  \code{\link{dbplot_raster}}, \code{\link{dbplot_histogram}}
 #'
 #' @export
